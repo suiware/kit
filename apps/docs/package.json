@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@suiware/ui": "workspace:*",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -27,7 +27,7 @@
     "eslint": "^8.57.1",
     "serve": "^14.2.4",
     "storybook": "^8.4.7",
-    "typescript": "5.5.4",
-    "vite": "^5.4.11"
+    "typescript": "5.7.2",
+    "vite": "^6.0.5"
   }
 }
