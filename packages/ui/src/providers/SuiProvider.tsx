@@ -1,49 +1,49 @@
-import { SuiClientProvider, WalletProvider } from '@mysten/dapp-kit'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { FC, PropsWithChildren } from 'react'
-import { APP_NAME } from '~~/config/main'
-import { darkTheme, lightTheme } from '~~/config/themes'
-import useNetworkConfig from '~~/hooks/useNetworkConfig'
-import { ENetwork } from '~~/types/ENetwork'
+import {
+  NetworkConfig,
+  SuiClientProvider,
+  Theme,
+  WalletProvider,
+} from "@mysten/dapp-kit";
+import { SuiClient } from "@mysten/sui/client";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { FC, PropsWithChildren } from "react";
 
-const queryClient = new QueryClient()
+// @todo: Extract to a separate file.
+export type NetworkConfigs<
+  T extends NetworkConfig | SuiClient = NetworkConfig | SuiClient,
+> = Record<string, T>;
 
-const SuiProvider: FC<PropsWithChildren> = ({ children }) => {
-  const { networkConfig } = useNetworkConfig()
+export interface ISuiProviderProps extends PropsWithChildren {
+  customQueryClient?: QueryClient;
+  customNetworkConfig?: NetworkConfigs<NetworkConfig | SuiClient> | undefined;
+  defaultNetwork?: string;
+  walletAutoConnect?: boolean;
+  // stashedWalletConfig?: StashedWalletConfig;
+  themeSettings?: Theme | null;
+}
 
+const queryClient = new QueryClient();
+
+const SuiProvider: FC<ISuiProviderProps> = ({
+  children,
+  customQueryClient,
+  customNetworkConfig,
+  defaultNetwork,
+  walletAutoConnect,
+  themeSettings,
+}) => {
   return (
-    <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={customQueryClient || queryClient}>
       <SuiClientProvider
-        networks={networkConfig}
-        defaultNetwork={ENetwork.LOCALNET}
+        networks={customNetworkConfig}
+        defaultNetwork={defaultNetwork}
       >
-        <WalletProvider
-          autoConnect={false}
-          stashedWallet={{
-            name: APP_NAME,
-          }}
-          theme={[
-            {
-              // Default to light theme.
-              variables: lightTheme,
-            },
-            {
-              // React to the color scheme media query.
-              mediaQuery: '(prefers-color-scheme: dark)',
-              variables: darkTheme,
-            },
-            {
-              // Reacts to the dark class.
-              selector: '.dark',
-              variables: darkTheme,
-            },
-          ]}
-        >
+        <WalletProvider autoConnect={walletAutoConnect} theme={themeSettings}>
           {children}
         </WalletProvider>
       </SuiClientProvider>
     </QueryClientProvider>
-  )
-}
+  );
+};
 
-export default SuiProvider
+export default SuiProvider;

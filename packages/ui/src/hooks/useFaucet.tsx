@@ -32,17 +32,18 @@ const useFaucet = (): IUseFaucetResponse => {
   const currentAccount = useCurrentAccount()
 
   const fund = async (address?: string) => {
+  
     if (!NETWORKS_WITH_FAUCET.includes(ctx.network)) {
-      notification.error(null, 'This network does not have a faucet')
-      return
+      notification.error(null, "This network does not have a faucet");
+      return;
     }
 
-    const fundedAddress = address == null ? currentAccount?.address : undefined
+    const fundedAddress = address == null ? currentAccount?.address : undefined;
     if (fundedAddress == null) {
-      notification.error(null, 'Please connect your wallet first')
-      return
+      notification.error(null, "Please connect your wallet first");
+      return;
     }
-
+ 
     try {
       const { error } = await fundAddress(
         fundedAddress,
