@@ -1,9 +1,13 @@
 import { useCurrentAccount, useSuiClientContext } from '@mysten/dapp-kit'
 import { formatAddress } from '@mysten/sui/utils'
 import { NETWORKS_WITH_FAUCET } from '~~/config/networks'
-import { fundAddress } from '~~/helpers/faucet'
-import { notification } from '~~/helpers/notification'
+import { fundAddress } from "~~/helpers/faucet";
 import { ENetworksWithFaucet } from '~~/types/ENetworksWithFaucet'
+
+export interface IUseFaucetParams {
+  onError?: (error: Error | null, errorMessage?: string) => void;
+  onSuccess?: (message: string) => void;
+}
 
 export interface IUseFaucetResponse {
   /**
@@ -27,47 +31,51 @@ export interface IUseFaucetResponse {
 
  * @returns {IUseFaucetResponse} An object with the fund function.
  */
-const useFaucet = (): IUseFaucetResponse => {
-  const ctx = useSuiClientContext()
-  const currentAccount = useCurrentAccount()
+const useFaucet = ({
+  onError,
+  onSuccess,
+}: IUseFaucetParams): IUseFaucetResponse => {
+  const ctx = useSuiClientContext();
+  const currentAccount = useCurrentAccount();
 
   const fund = async (address?: string) => {
-  
     if (!NETWORKS_WITH_FAUCET.includes(ctx.network)) {
-      notification.error(null, "This network does not have a faucet");
+      onError != null && onError(null, "This network does not have a faucet");
       return;
     }
 
     const fundedAddress = address == null ? currentAccount?.address : undefined;
     if (fundedAddress == null) {
-      notification.error(null, "Please connect your wallet first");
+      onError != null && onError(null, "Please connect your wallet first");
       return;
     }
- 
+
     try {
       const { error } = await fundAddress(
         fundedAddress,
         ctx.network as ENetworksWithFaucet
-      )
+      );
       if (error) {
-        notification.error(
-          new Error(error),
-          'Cannot fund the address on this network at the moment'
-        )
+        onError != null &&
+          onError(
+            new Error(error),
+            "Cannot fund the address on this network at the moment"
+          );
       }
     } catch (e) {
-      notification.error(e as Error, 'Cannot fund the address')
-      return
+      onError != null && onError(e as Error, "Cannot fund the address");
+      return;
     }
 
-    notification.success(
-      `The ${formatAddress(fundedAddress)} address has been funded successfully`
-    )
-  }
+    onSuccess != null &&
+      onSuccess(
+        `The ${formatAddress(fundedAddress)} address has been funded successfully`
+      );
+  };
 
   return {
     fund,
-  }
-}
+  };
+};
 
 export default useFaucet

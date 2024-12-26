@@ -17,7 +17,10 @@ import useFaucet from '~~/hooks/useFaucet'
  * The component is using the useFaucet hook to fund the current address.
  */
 const Faucet = () => {
-  const { fund } = useFaucet()
+  const { fund } = useFaucet({
+    onError: console.error,
+    onSuccess: console.log,
+  });
 
   return (
     <Button
