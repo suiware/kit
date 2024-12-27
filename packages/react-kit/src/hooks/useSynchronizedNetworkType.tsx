@@ -65,7 +65,9 @@ const useSynchronizedNetworkType = ({
 }: IUseSynchronizedNetworkTypeParams = {}): IUseSynchronizedNetworkTypeResponse => {
   const wallet = useCurrentWallet();
   const ctx = useSuiClientContext();
-  const [networkType, setNetworkType] = useState<ENetwork | undefined>();
+  const [networkType, setNetworkType] = useState<
+    "mainnet" | "testnet" | "devnet" | "localnet" | undefined
+  >(undefined);
 
   // @todo Find a better type for the wallet.
   /* eslint-disable  @typescript-eslint/no-explicit-any */
@@ -80,7 +82,7 @@ const useSynchronizedNetworkType = ({
 
     const newNetwork = formatNetworkType(
       wallet.currentWallet?.accounts?.[0].chains?.[0]
-    );
+    ) as "mainnet" | "testnet" | "devnet" | "localnet" | undefined;
 
     // Save currently selected wallet network.
     setNetworkType(newNetwork);

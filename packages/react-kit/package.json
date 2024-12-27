@@ -39,10 +39,10 @@
       "import": "./dist/components/NetworkType.mjs",
       "require": "./dist/components/NetworkType.js"
     },
-    "./useNetworkConfig": {
-      "types": "./src/hooks/useNetworkConfig.tsx",
-      "import": "./dist/hooks/useNetworkConfig.mjs",
-      "require": "./dist/hooks/useNetworkConfig.js"
+    "./useSynchronizedNetworkType": {
+      "types": "./src/hooks/useSynchronizedNetworkType.tsx",
+      "import": "./dist/hooks/useSynchronizedNetworkType.mjs",
+      "require": "./dist/hooks/useSynchronizedNetworkType.js"
     }
   },
   "scripts": {
@@ -66,7 +66,7 @@
     "@mysten/sui": "^1.18.0",
     "@mysten/wallet-standard": "^0.13.20",
     "@radix-ui/themes": "^3.1.6",
-    "@tanstack/react-query": "^5.62.10",
+    "@tanstack/react-query": "^5.62.11",
     "bignumber.js": "^9.1.2",
     "clsx": "^2.1.1",
     "lucide-react": "^0.469.0",
