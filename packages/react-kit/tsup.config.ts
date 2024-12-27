@@ -4,6 +4,9 @@ export default defineConfig((options) => ({
   entryPoints: [
     "src/button.tsx",
     "src/components/Faucet.tsx",
+    "src/hooks/useFaucet.tsx",
+    "src/components/Balance.tsx",
+    "src/hooks/useBalance.tsx",
     "src/providers/SuiProvider.tsx",
   ],
   format: ["cjs", "esm"],

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Faucet from "@suiware/react-kit/Faucet";
+import Balance from "@suiware/react-kit/Balance";
 
-const meta: Meta<typeof Faucet> = {
-  component: Faucet,
+const meta: Meta<typeof Balance> = {
+  component: Balance,
   argTypes: {
     // type: {
     //   control: { type: "radio" },
@@ -13,7 +13,7 @@ const meta: Meta<typeof Faucet> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Faucet>;
+type Story = StoryObj<typeof Balance>;
 
 /*
  *👇 Render functions are a framework specific feature to allow you control on how the component renders.
@@ -21,7 +21,7 @@ type Story = StoryObj<typeof Faucet>;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-  render: (props) => <Faucet />,
-  name: "Faucet",
+  render: (props) => <Balance />,
+  name: "Balance",
   args: {},
 };

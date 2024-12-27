@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react";
-import SuiProvider from "@suiware/ui/SuiProvider";
+import SuiProvider from "@suiware/react-kit/SuiProvider";
 import React from "react";
 
 const preview: Preview = {

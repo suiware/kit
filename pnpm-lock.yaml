@@ -20,9 +20,9 @@ importers:
 
   apps/docs:
     dependencies:
-      '@suiware/ui':
+      '@suiware/react-kit':
         specifier: workspace:*
-        version: link:../../packages/ui
+        version: link:../../packages/react-kit
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -88,9 +88,7 @@ importers:
         specifier: ^0.8.0
         version: 0.8.0(eslint@8.57.1)(typescript@5.7.2)
 
-  packages/typescript-config: {}
-
-  packages/ui:
+  packages/react-kit:
     dependencies:
       '@mysten/dapp-kit':
         specifier: ^0.14.44
@@ -147,6 +145,8 @@ importers:
       typescript:
         specifier: 5.7.2
         version: 5.7.2
+
+  packages/typescript-config: {}
 
 packages:
 

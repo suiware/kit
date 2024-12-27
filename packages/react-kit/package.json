@@ -1,5 +1,5 @@
 {
-  "name": "@suiware/ui",
+  "name": "@suiware/react-kit",
   "version": "0.0.0",
   "sideEffects": false,
   "license": "MIT",
@@ -13,6 +13,21 @@
       "types": "./src/components/Faucet.tsx",
       "import": "./dist/components/Faucet.mjs",
       "require": "./dist/components/Faucet.js"
+    },
+    "./useFaucet": {
+      "types": "./src/hooks/useFaucet.tsx",
+      "import": "./dist/hooks/useFaucet.mjs",
+      "require": "./dist/hooks/useFaucet.js"
+    },
+    "./Balance": {
+      "types": "./src/components/Balance.tsx",
+      "import": "./dist/components/Balance.mjs",
+      "require": "./dist/components/Balance.js"
+    },
+    "./useBalance": {
+      "types": "./src/hooks/useBalance.tsx",
+      "import": "./dist/hooks/useBalance.mjs",
+      "require": "./dist/hooks/useBalance.js"
     },
     "./SuiProvider": {
       "types": "./src/providers/SuiProvider.tsx",
