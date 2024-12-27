@@ -33,6 +33,16 @@
       "types": "./src/providers/SuiProvider.tsx",
       "import": "./dist/providers/SuiProvider.mjs",
       "require": "./dist/providers/SuiProvider.js"
+    },
+    "./NetworkType": {
+      "types": "./src/components/NetworkType.tsx",
+      "import": "./dist/components/NetworkType.mjs",
+      "require": "./dist/components/NetworkType.js"
+    },
+    "./useNetworkConfig": {
+      "types": "./src/hooks/useNetworkConfig.tsx",
+      "import": "./dist/hooks/useNetworkConfig.mjs",
+      "require": "./dist/hooks/useNetworkConfig.js"
     }
   },
   "scripts": {

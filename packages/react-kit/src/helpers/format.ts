@@ -16,3 +16,10 @@ export const formatAmount = (amount: string | number | bigint | undefined) => {
 
   return bn.decimalPlaces(2, BigNumber.ROUND_DOWN).toFormat(2);
 };
+
+export const formatNetworkType = (machineName: string) => {
+  if (machineName.startsWith('sui:')) {
+    return machineName.substring(4)
+  }
+  return machineName
+}

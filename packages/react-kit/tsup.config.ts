@@ -7,6 +7,8 @@ export default defineConfig((options) => ({
     "src/hooks/useFaucet.tsx",
     "src/components/Balance.tsx",
     "src/hooks/useBalance.tsx",
+    "src/components/NetworkType.tsx",
+    "src/hooks/useNetworkConfig.tsx",
     "src/providers/SuiProvider.tsx",
   ],
   format: ["cjs", "esm"],
