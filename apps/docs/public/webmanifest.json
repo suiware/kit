@@ -1,0 +1,21 @@
+{
+    "name": "Suiware React Kit",
+    "short_name": "Suiware React Kit",
+    "description": "Suiware React Kit: Docs",
+    "start_url": "/?utm_source=app_manifest",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#011631",
+    "background_color": "#011631",
+    "display": "standalone"
+}
