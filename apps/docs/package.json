@@ -11,6 +11,7 @@
     "lint": "eslint ./stories/*.stories.tsx --max-warnings 0"
   },
   "dependencies": {
+    "@mysten/dapp-kit": "^0.14.44",
     "@suiware/react-kit": "workspace:*",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
