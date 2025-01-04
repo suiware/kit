@@ -1,4 +1,4 @@
-# @suiware/kit
+# @suiware/kit [Not production-ready yet]
 React components and hooks for Sui development
 
 _Started with Turborepo Design System Starter (design-system)._
