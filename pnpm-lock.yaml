@@ -38,9 +38,9 @@ importers:
       '@radix-ui/themes':
         specifier: ^3.1.6
         version: 3.1.6(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@suiware/react-kit':
+      '@suiware/kit':
         specifier: workspace:*
-        version: link:../../packages/react-kit
+        version: link:../../packages/kit
       '@tanstack/react-query':
         specifier: ^5.62.7
         version: 5.62.11(react@19.0.0)
@@ -142,7 +142,7 @@ importers:
         specifier: ^0.8.0
         version: 0.8.0(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.2)
 
-  packages/react-kit:
+  packages/kit:
     dependencies:
       '@mysten/dapp-kit':
         specifier: ^0.14.44
