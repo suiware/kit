@@ -1,6 +1,5 @@
 import { useCurrentAccount, useSuiClientContext } from '@mysten/dapp-kit';
 import { formatAddress } from '@mysten/sui/utils';
-import { NETWORKS_WITH_FAUCET } from '~~/config/networks';
 import { fundAddress } from "~~/helpers/faucet";
 
 export interface IUseFaucetParams {
@@ -39,7 +38,7 @@ const useFaucet = ({
   const currentAccount = useCurrentAccount();
 
   const fund = async (address?: string) => {
-    if (!NETWORKS_WITH_FAUCET.includes(ctx.network)) {
+    if (!['localnet', 'devnet', 'testnet'].includes(ctx.network)) {
       onError != null && onError(null, "This network does not have a faucet");
       return;
     }
@@ -53,7 +52,7 @@ const useFaucet = ({
     try {
       const { error } = await fundAddress(
         fundedAddress,
-        ctx.network
+        ctx.network as "localnet" | "devnet" | "testnet"
       );
       if (error) {
         onError != null &&
