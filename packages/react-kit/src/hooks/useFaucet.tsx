@@ -1,8 +1,7 @@
-import { useCurrentAccount, useSuiClientContext } from '@mysten/dapp-kit'
-import { formatAddress } from '@mysten/sui/utils'
-import { NETWORKS_WITH_FAUCET } from '~~/config/networks'
+import { useCurrentAccount, useSuiClientContext } from '@mysten/dapp-kit';
+import { formatAddress } from '@mysten/sui/utils';
+import { NETWORKS_WITH_FAUCET } from '~~/config/networks';
 import { fundAddress } from "~~/helpers/faucet";
-import { ENetworksWithFaucet } from '~~/types/ENetworksWithFaucet'
 
 export interface IUseFaucetParams {
   onError?: (error: Error | null, errorMessage?: string) => void;
@@ -12,6 +11,7 @@ export interface IUseFaucetParams {
 export interface IUseFaucetResponse {
   /**
    * Funds the address on the test network.
+   * 
    * @param {string|undefined} address The address to fund. If not provided, the current address is used.
    */
   fund: (address?: string) => void
@@ -53,7 +53,7 @@ const useFaucet = ({
     try {
       const { error } = await fundAddress(
         fundedAddress,
-        ctx.network as ENetworksWithFaucet
+        ctx.network
       );
       if (error) {
         onError != null &&

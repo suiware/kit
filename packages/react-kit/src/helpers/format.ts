@@ -2,8 +2,6 @@ import BigNumber from "bignumber.js";
 
 /**
  * Format SUI amount to a human readable format.
- * 
- * My opinion is that is should be in the SDK https://github.com/MystenLabs/sui/issues/17791
  *
  * @param amount
  * @returns
