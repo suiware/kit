@@ -55,14 +55,14 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.10.5",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.1",
     "postcss": "^8.4.49",
     "prettier-plugin-tailwindcss": "^0.6.9",
-    "tailwindcss": "^3.4.16",
+    "tailwindcss": "^3.4.17",
     "tsup": "^8.3.5",
     "typescript": "5.7.2"
   },
@@ -71,12 +71,12 @@
     "@mysten/sui": "^1.18.0",
     "@mysten/wallet-standard": "^0.13.20",
     "@radix-ui/themes": "^3.1.6",
-    "@tanstack/react-query": "^5.62.11",
+    "@tanstack/react-query": "^5.62.15",
     "bignumber.js": "^9.1.2",
     "clsx": "^2.1.1",
     "lucide-react": "^0.469.0",
     "react": "^19.0.0",
-    "react-hot-toast": "^2.4.1"
+    "react-hot-toast": "^2.5.1"
   },
   "publishConfig": {
     "access": "public"
