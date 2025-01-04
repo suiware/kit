@@ -26,7 +26,7 @@ const NetworkType = () => {
   // @todo Suggest Radix adding a better type for the color.
   /* eslint-disable  @typescript-eslint/no-explicit-any */
   return (
-    <Badge color={color as any} className="rounded-lg px-3 py-1.5">
+    <Badge color={color as any} className="sk-network-badge">
       {networkType || 'disconnected'}
     </Badge>
   )

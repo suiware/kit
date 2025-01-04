@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .sk-balance-badge {
+    @apply rounded-lg px-3 py-1.5;
+  }
+  .sk-faucet-button {
+    @apply cursor-pointer rounded-lg px-3 py-1.5;
+  }
+  .sk-network-badge {
+    @apply rounded-lg px-3 py-1.5;
+  }
+}

@@ -25,7 +25,7 @@ const Faucet = () => {
   return (
     <Button
       variant="surface"
-      className="cursor-pointer rounded-lg px-3 py-1.5"
+      className="sk-faucet-button"
       onClick={() => fund()}
     >
       <HandCoinsIcon />

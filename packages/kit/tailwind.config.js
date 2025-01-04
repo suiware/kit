@@ -9,5 +9,8 @@ module.exports = {
   plugins: [],
   corePlugins: {
     preflight: false,
+  },
+  experimental: {
+    optimizeUniversalDefaults: true,
   }
 }

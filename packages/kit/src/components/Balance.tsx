@@ -18,7 +18,7 @@ const Balance = () => {
   }
 
   return (
-    <Badge variant="surface" color="green" className="rounded-lg px-3 py-1.5">
+    <Badge variant="surface" color="green" className="sk-balance-badge">
       {balance} SUI
     </Badge>
   );
