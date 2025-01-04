@@ -50,7 +50,7 @@
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "format": "prettier --write './src/**/*.{js,jsx,ts,tsx}'",
-    "styles": "tailwindcss -i ./src/styles/main.css -o ./dist/main.css --minify"
+    "styles": "tailwindcss -c ./tailwind.config.js -i ./src/styles/main.css -o ./dist/main.css --minify"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
