@@ -1,7 +1,7 @@
 # @suiware/kit [Not production-ready yet]
 React components and hooks for Sui development
 
-_Started with Turborepo Design System Starter (design-system)._
+_Started with [Turborepo](https://turbo.build/repo) Design System Starter (design-system)._
 
 TBC
 
@@ -12,12 +12,6 @@ TBC
 - `pnpm lint` - Lint all packages
 - `pnpm changeset` - Generate a changeset
 - `pnpm clean` - Clean up all `node_modules` and `dist` folders (runs each package's clean script)
-
-## Turborepo
-
-[Turborepo](https://turbo.build/repo) is a high-performance build system for JavaScript and TypeScript codebases. It was designed after the workflows used by massive software engineering organizations to ship code at scale. Turborepo abstracts the complex configuration needed for monorepos and provides fast, incremental builds with zero-configuration remote caching.
-
-Using Turborepo simplifies managing your design system monorepo, as you can have a single lint, build, test, and release process for all packages. [Learn more](https://vercel.com/blog/monorepos-are-changing-how-teams-build-software) about how monorepos improve your development workflow.
 
 ## Apps & Packages
 
@@ -94,45 +88,15 @@ export { Button, type ButtonProps } from "./Button";
 // Add new component exports here
 ```
 
-## Storybook
+## Docs
 
-Storybook provides us with an interactive UI playground for our components. This allows us to preview our components in the browser and instantly see changes when developing locally. This example preconfigures Storybook to:
+TBC
 
-- Use Vite to bundle stories instantly (in milliseconds)
-- Automatically find any stories inside the `stories/` folder
-- Support using module path aliases like `@acme-core` for imports
-- Write MDX for component documentation pages
-
-For example, here's the included Story for our `Button` component:
-
-```js:apps/docs/stories/button.stories.mdx
-import { Button } from '@acme-core/src';
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-
-<Meta title="Components/Button" component={Button} />
-
-# Button
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur tempor, nisl nunc egestas nisi, euismod aliquam nisl nunc euismod.
-
-## Props
-
-<Props of={Box} />
-
-## Examples
-
-<Preview>
-  <Story name="Default">
-    <Button>Hello</Button>
-  </Story>
-</Preview>
-```
-
-This example includes a few helpful Storybook scripts:
+Commands:
 
 - `pnpm dev`: Starts Storybook in dev mode with hot reloading at `localhost:6006`
 - `pnpm build`: Builds the Storybook UI and generates the static HTML files
-- `pnpm preview-storybook`: Starts a local server to view the generated Storybook UI
+- `pnpm preview`: Starts a local server to view the generated Docs
 
 ## Versioning & Publishing Packages
 
