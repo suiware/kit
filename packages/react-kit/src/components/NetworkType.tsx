@@ -1,5 +1,5 @@
 import { Badge } from '@radix-ui/themes'
-import useSynchronizedNetworkType from '~~/hooks/useSynchronizedNetworkType'
+import useNetworkType from '~~/hooks/useNetworkType'
 
 /**
  * The `NetworkType` component renders the name of the currently selected network or disconnected if no wallet connected.
@@ -11,10 +11,10 @@ import useSynchronizedNetworkType from '~~/hooks/useSynchronizedNetworkType'
  * - mainnet: green
  * Please note the user wallet is the single point of truth and the only way to switch the network now is through wallet settings.
  * 
- * The component is using the useSynchronizedNetworkType hook to fetch the network type.
+ * The component is using the useNetworkType hook to fetch the network type.
  */
 const NetworkType = () => {
-  const { networkType } = useSynchronizedNetworkType({ autoSync: true })
+  const { networkType } = useNetworkType({ autoSync: true })
 
   let color = 'amber'
   if (networkType == null) {

@@ -8,7 +8,7 @@ import { formatNetworkType } from "~~/helpers/format";
 
 const DEFAULT_REFETCH_INTERVAL = 3000;
 
-export interface IUseSynchronizedNetworkTypeParams {
+export interface IUseNetworkTypeParams {
   /**
    * (Optional) The flag determines whether the app network needs to be synchronized with the wallet network regularly or just once.
    */
@@ -18,7 +18,7 @@ export interface IUseSynchronizedNetworkTypeParams {
    */
   autoSyncInterval?: number;
 }
-export interface IUseSynchronizedNetworkTypeResponse {
+export interface IUseNetworkTypeResponse {
   /**
    * Network type or undefined if wallet is not connected.
    */
@@ -30,7 +30,7 @@ export interface IUseSynchronizedNetworkTypeResponse {
 }
 
 /**
- * The useSynchronizedNetworkType() hook lets you determine which network is currently active in the user wallet.
+ * The useNetworkType() hook lets you determine which network is currently active in the user wallet.
  *
  * It's possible to request the network type once or on a regular basis.
  * If a wallet is not connected, the network type will be undefined.
@@ -39,30 +39,30 @@ export interface IUseSynchronizedNetworkTypeResponse {
  * Usage:
  * - One-time request
  * ```ts
- * const { networkType } = useSynchronizedNetworkType({
+ * const { networkType } = useNetworkType({
  *  autoSync: false
  * })
  * ```
  * - On demand
  * ```ts
- * const { networkType, synchronize } = useSynchronizedNetworkType()
+ * const { networkType, synchronize } = useNetworkType()
  * synchronize()
  * ```
  * - Regular update
  * ```ts
- * const { networkType } = useSynchronizedNetworkType({
+ * const { networkType } = useNetworkType({
  *  autoSync: true,
  *  autoSyncInterval: 3000
  * })
  * ```
  *
- * @param {IUseSynchronizedNetworkTypeParams} params The parameter object.
- * @returns {IUseSynchronizedNetworkTypeResponse} An object with the network type and synchronize function.
+ * @param {IUseNetworkTypeParams} params The parameter object.
+ * @returns {IUseNetworkTypeResponse} An object with the network type and synchronize function.
  */
-const useSynchronizedNetworkType = ({
+const useNetworkType = ({
   autoSync,
   autoSyncInterval,
-}: IUseSynchronizedNetworkTypeParams = {}): IUseSynchronizedNetworkTypeResponse => {
+}: IUseNetworkTypeParams = {}): IUseNetworkTypeResponse => {
   const wallet = useCurrentWallet();
   const ctx = useSuiClientContext();
   const [networkType, setNetworkType] = useState<
@@ -128,4 +128,4 @@ const useSynchronizedNetworkType = ({
   };
 };
 
-export default useSynchronizedNetworkType
+export default useNetworkType

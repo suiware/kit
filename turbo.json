@@ -15,6 +15,9 @@
     },
     "clean": {
       "cache": false
+    },
+    "format": {
+      "cache": false
     }
   }
 }

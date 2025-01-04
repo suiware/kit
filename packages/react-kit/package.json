@@ -4,11 +4,6 @@
   "sideEffects": false,
   "license": "MIT",
   "exports": {
-    "./button": {
-      "types": "./src/button.tsx",
-      "import": "./dist/button.mjs",
-      "require": "./dist/button.js"
-    },
     "./Faucet": {
       "types": "./src/components/Faucet.tsx",
       "import": "./dist/components/Faucet.mjs",
@@ -39,17 +34,18 @@
       "import": "./dist/components/NetworkType.mjs",
       "require": "./dist/components/NetworkType.js"
     },
-    "./useSynchronizedNetworkType": {
-      "types": "./src/hooks/useSynchronizedNetworkType.tsx",
-      "import": "./dist/hooks/useSynchronizedNetworkType.mjs",
-      "require": "./dist/hooks/useSynchronizedNetworkType.js"
+    "./useNetworkType": {
+      "types": "./src/hooks/useNetworkType.tsx",
+      "import": "./dist/hooks/useNetworkType.mjs",
+      "require": "./dist/hooks/useNetworkType.js"
     }
   },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint . --max-warnings 0",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "format": "prettier --write './src/**/*.{js,jsx,ts,tsx}'"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -58,6 +54,7 @@
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "eslint": "^8.57.1",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "tsup": "^8.3.5",
     "typescript": "5.7.2"
   },
