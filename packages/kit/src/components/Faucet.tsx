@@ -1,6 +1,12 @@
-import { Button } from '@radix-ui/themes'
-import { HandCoinsIcon } from 'lucide-react'
-import useFaucet from '~~/hooks/useFaucet'
+import { Button } from '@radix-ui/themes';
+import { HandCoinsIcon } from 'lucide-react';
+import { FC } from 'react';
+import useFaucet from '~~/hooks/useFaucet';
+
+export interface IFaucet {
+  onError?: (error: Error | null, errorMessage?: string) => void;
+  onSuccess?: (message: string) => void;
+}
 
 /**
  * The `Faucet` component renders a button that lets user fund their current address on the currently selected test network.
@@ -15,11 +21,15 @@ import useFaucet from '~~/hooks/useFaucet'
  * of the official Sui Discord https://discord.gg/sui
  * 
  * The component is using the useFaucet hook to fund the current address.
+ * 
+ * @param {IFaucet} props The component props.
  */
-const Faucet = () => {
+const Faucet: FC<IFaucet> = (props) => {
+  const { onError, onSuccess } = props;
+
   const { fund } = useFaucet({
-    onError: console.error,
-    onSuccess: console.log,
+    onError,
+    onSuccess,
   });
 
   return (
