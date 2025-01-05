@@ -144,6 +144,16 @@ importers:
 
   packages/kit:
     dependencies:
+      '@radix-ui/themes':
+        specifier: ^3.1.6
+        version: 3.1.6(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      bignumber.js:
+        specifier: ^9.1.2
+        version: 9.1.2
+      lucide-react:
+        specifier: ^0.469.0
+        version: 0.469.0(react@19.0.0)
+    devDependencies:
       '@mysten/dapp-kit':
         specifier: ^0.14.44
         version: 0.14.44(@tanstack/react-query@5.62.15(react@19.0.0))(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.2)
@@ -153,34 +163,15 @@ importers:
       '@mysten/wallet-standard':
         specifier: ^0.13.20
         version: 0.13.20(typescript@5.7.2)
-      '@radix-ui/themes':
-        specifier: ^3.1.6
-        version: 3.1.6(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@tanstack/react-query':
-        specifier: ^5.62.15
-        version: 5.62.15(react@19.0.0)
-      bignumber.js:
-        specifier: ^9.1.2
-        version: 9.1.2
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
-      lucide-react:
-        specifier: ^0.469.0
-        version: 0.469.0(react@19.0.0)
-      react:
-        specifier: ^19.0.0
-        version: 19.0.0
-      react-hot-toast:
-        specifier: ^2.5.1
-        version: 2.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-    devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
+      '@tanstack/react-query':
+        specifier: ^5.62.15
+        version: 5.62.15(react@19.0.0)
       '@types/node':
         specifier: ^22.10.5
         version: 22.10.5
@@ -202,6 +193,9 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: ^0.6.9
         version: 0.6.9(prettier@3.4.2)
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17

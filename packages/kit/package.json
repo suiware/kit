@@ -1,6 +1,6 @@
 {
   "name": "@suiware/kit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "sideEffects": false,
   "license": "MIT",
   "exports": {
@@ -68,19 +68,24 @@
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.17",
     "tsup": "^8.3.5",
-    "typescript": "5.7.2"
-  },
-  "dependencies": {
+    "typescript": "5.7.2",
     "@mysten/dapp-kit": "^0.14.44",
     "@mysten/sui": "^1.18.0",
     "@mysten/wallet-standard": "^0.13.20",
-    "@radix-ui/themes": "^3.1.6",
     "@tanstack/react-query": "^5.62.15",
+    "react": "^19.0.0"
+  },
+  "dependencies": {
+    "@radix-ui/themes": "^3.1.6",
     "bignumber.js": "^9.1.2",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.469.0",
-    "react": "^19.0.0",
-    "react-hot-toast": "^2.5.1"
+    "lucide-react": "^0.469.0"
+  },
+  "peerDependencies": {
+    "@mysten/dapp-kit": "^0.14.44",
+    "@mysten/sui": "^1.18.0",
+    "@mysten/wallet-standard": "^0.13.20",
+    "@tanstack/react-query": "^5.62.15",
+    "react": "^19.0.0"
   },
   "publishConfig": {
     "access": "public"
