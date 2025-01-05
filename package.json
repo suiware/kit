@@ -9,7 +9,7 @@
     "version-packages": "changeset version",
     "release": "turbo run build --filter=docs^... && changeset publish",
     "prepublishOnly": "turbo run build --filter=docs^...",
-    "kit:publish": "pnpm --filter=@suiware/kit publish"
+    "kit:publish": "turbo run build --filter=docs^... && pnpm --filter=@suiware/kit publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.11",
