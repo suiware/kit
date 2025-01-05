@@ -14,12 +14,12 @@ export type NetworkConfigs<
 > = Record<string, T>;
 
 export interface ISuiProviderProps extends PropsWithChildren {
-  customQueryClient?: QueryClient;
-  customNetworkConfig?: NetworkConfigs<NetworkConfig | SuiClient> | undefined;
-  defaultNetwork?: string;
-  walletAutoConnect?: boolean;
-  // stashedWalletConfig?: StashedWalletConfig;
-  themeSettings?: Theme | null;
+  customQueryClient?: QueryClient
+  customNetworkConfig?: NetworkConfigs<NetworkConfig | SuiClient> | undefined
+  defaultNetwork?: string
+  walletAutoConnect?: boolean
+  walletStashedName?: string
+  themeSettings?: Theme | null
 }
 
 const queryClient = new QueryClient();
@@ -30,6 +30,7 @@ const SuiProvider: FC<ISuiProviderProps> = ({
   customNetworkConfig,
   defaultNetwork,
   walletAutoConnect,
+  walletStashedName,
   themeSettings,
 }) => {
   return (
@@ -38,12 +39,16 @@ const SuiProvider: FC<ISuiProviderProps> = ({
         networks={customNetworkConfig}
         defaultNetwork={defaultNetwork}
       >
-        <WalletProvider autoConnect={walletAutoConnect} theme={themeSettings}>
+        <WalletProvider
+          autoConnect={walletAutoConnect}
+          theme={themeSettings}
+          stashedWallet={{ name: walletStashedName || 'Sui Wallet' }}
+        >
           {children}
         </WalletProvider>
       </SuiClientProvider>
     </QueryClientProvider>
-  );
-};
+  )
+}
 
 export default SuiProvider;
