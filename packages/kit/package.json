@@ -9,41 +9,44 @@
       "require": "./dist/main.css"
     },
     "./SuiProvider": {
-      "types": "./src/providers/SuiProvider.tsx",
+      "types": "./dist/providers/SuiProvider.d.ts",
       "import": "./dist/providers/SuiProvider.mjs",
       "require": "./dist/providers/SuiProvider.js"
     },
     "./Faucet": {
-      "types": "./src/components/Faucet.tsx",
+      "types": "./dist/components/Faucet.d.ts",
       "import": "./dist/components/Faucet.mjs",
       "require": "./dist/components/Faucet.js"
     },
     "./useFaucet": {
-      "types": "./src/hooks/useFaucet.tsx",
+      "types": "./dist/hooks/useFaucet.d.ts",
       "import": "./dist/hooks/useFaucet.mjs",
       "require": "./dist/hooks/useFaucet.js"
     },
     "./Balance": {
-      "types": "./src/components/Balance.tsx",
+      "types": "./dist/components/Balance.d.ts",
       "import": "./dist/components/Balance.mjs",
       "require": "./dist/components/Balance.js"
     },
     "./useBalance": {
-      "types": "./src/hooks/useBalance.tsx",
+      "types": "./dist/hooks/useBalance.d.ts",
       "import": "./dist/hooks/useBalance.mjs",
       "require": "./dist/hooks/useBalance.js"
     },
     "./NetworkType": {
-      "types": "./src/components/NetworkType.tsx",
+      "types": "./dist/components/NetworkType.d.ts",
       "import": "./dist/components/NetworkType.mjs",
       "require": "./dist/components/NetworkType.js"
     },
     "./useNetworkType": {
-      "types": "./src/hooks/useNetworkType.tsx",
+      "types": "./dist/hooks/useNetworkType.d.ts",
       "import": "./dist/hooks/useNetworkType.mjs",
       "require": "./dist/hooks/useNetworkType.js"
     }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup && npm run styles",
     "dev": "tsup --watch",
