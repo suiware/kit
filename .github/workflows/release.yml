@@ -9,7 +9,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
-    if: true
+    if: false
     name: Release
     runs-on: ubuntu-latest
     steps:
