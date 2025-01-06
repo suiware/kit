@@ -1,18 +1,17 @@
 {
   "name": "@suiware/kit",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "sideEffects": false,
   "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
-    "./main.css": {
-      "import": "./dist/main.css",
-      "require": "./dist/main.css"
-    },
+    "./main.css": "./dist/main.css",
     "./SuiProvider": {
       "types": "./dist/providers/SuiProvider.d.ts",
       "import": "./dist/providers/SuiProvider.mjs",
