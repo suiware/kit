@@ -8,6 +8,7 @@ An opinionated React components and hooks for Sui dApps.
 
 ## Components
 
+- [AddressInput](./docs/AddressInput.md)
 
 ## Hooks
 
