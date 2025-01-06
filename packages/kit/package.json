@@ -1,9 +1,12 @@
 {
   "name": "@suiware/kit",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "sideEffects": false,
   "license": "MIT",
   "exports": {
+    "./index.d.ts": {
+      "types": "./dist/index.d.ts"
+    },
     "./main.css": {
       "import": "./dist/main.css",
       "require": "./dist/main.css"
@@ -55,9 +58,7 @@
     }
   },
   "files": [
-    "dist",
-    "main.css",
-    "index.d.ts"
+    "dist"
   ],
   "scripts": {
     "build": "tsup && npm run styles && npm run types",
