@@ -42,6 +42,11 @@
       "types": "./dist/hooks/useNetworkType.d.ts",
       "import": "./dist/hooks/useNetworkType.mjs",
       "require": "./dist/hooks/useNetworkType.js"
+    },
+    "./AddressInput": {
+      "types": "./dist/components/AddressInput.d.ts",
+      "import": "./dist/components/AddressInput.mjs",
+      "require": "./dist/components/AddressInput.js"
     }
   },
   "files": [
@@ -59,12 +64,13 @@
   "devDependencies": {
     "@mysten/dapp-kit": "^0.14.44",
     "@mysten/sui": "^1.18.0",
+    "@mysten/suins": "^0.4.2",
     "@mysten/wallet-standard": "^0.13.20",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@tanstack/react-query": "^5.62.15",
     "@types/node": "^22.10.5",
-    "@types/react": "^19.0.2",
+    "@types/react": "^19.0.3",
     "@types/react-dom": "^19.0.2",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.1",
