@@ -14,14 +14,14 @@
   }
   .sk-address-input {
     @apply flex flex-col gap-1;
-    /* & input {
+    & input {
       @apply w-full rounded-lg border px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500 border-gray-300;
       &.error {
-        @apply text-red-500;
+        @apply border-red-500 focus:ring-red-500;
       }
     }
     & span {
       @apply text-sm text-red-500;
-    } */
+    }
   }
 }

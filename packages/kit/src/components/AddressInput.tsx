@@ -1,7 +1,10 @@
 import { isValidSuiAddress } from '@mysten/sui/utils'
 import type { SuinsClient } from '@mysten/suins'
-import { ChangeEvent, FC, useEffect, useState } from 'react'
+import debounce from 'lodash.debounce'
+import { ChangeEvent, FC, useCallback, useEffect, useState } from 'react'
 import { resolveSuinsName } from '~~/helpers/suins'
+
+const DEBOUNCE_DELAY = 500
 
 export interface IAddressInput {
   value: string
@@ -23,25 +26,19 @@ const AddressInput: FC<IAddressInput> = ({
   const [inputValue, setInputValue] = useState(value)
   const [error, setError] = useState<string | null>(null)
 
-  useEffect(() => {
-    setInputValue(value)
-  }, [value])
-
-  const handleChange = async (e: ChangeEvent<HTMLInputElement>) => {
-    const newValue = e.target.value.trim()
-    setInputValue(newValue)
-
-    // Handle SuiNS names.
-    if (newValue.endsWith('.sui') || newValue.startsWith('@')) {
-      if (suinsClient == null) {
+  // Debounced SuiNS resolution
+  const debouncedResolve = useCallback(
+    debounce(async (name: string) => {
+      if (!suinsClient) {
         setError(
           'SuinsClient is not available. Pass it through component props to make SuiNS name resolving work.'
         )
         return
       }
 
+      console.debug('debug: SuiNS name resolving started')
       try {
-        const resolvedAddress = await resolveSuinsName(suinsClient, newValue)
+        const resolvedAddress = await resolveSuinsName(suinsClient, name)
         if (resolvedAddress) {
           setError(null)
           onChange(resolvedAddress)
@@ -51,6 +48,18 @@ const AddressInput: FC<IAddressInput> = ({
       } catch (err) {
         setError('Failed to resolve SuiNS name')
       }
+    }, DEBOUNCE_DELAY),
+    [suinsClient, onChange]
+  )
+
+  const handleChange = async (e: ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.target.value.trim()
+    setInputValue(newValue)
+
+    // Handle SuiNS names.
+    if (newValue.endsWith('.sui') || newValue.startsWith('@')) {
+      console.debug('debug: SuiNS name detected')
+      debouncedResolve(newValue)
       return
     }
 
@@ -64,6 +73,17 @@ const AddressInput: FC<IAddressInput> = ({
     setError(null)
     onChange(newValue)
   }
+
+  useEffect(() => {
+    setInputValue(value)
+  }, [value])
+
+  // Cleanup debounce on unmount
+  useEffect(() => {
+    return () => {
+      debouncedResolve.cancel()
+    }
+  }, [debouncedResolve])
 
   return (
     <div className="sk-address-input">
