@@ -4,7 +4,7 @@ import {
   useSuiClientContext,
 } from "@mysten/dapp-kit";
 import { useEffect, useState } from "react";
-import { formatNetworkType } from "~~/helpers/format";
+import { formatNetworkType } from '~~/helpers/formatNetworkType'
 
 const DEFAULT_REFETCH_INTERVAL = 3000;
 

@@ -1,6 +1,6 @@
 import { useCurrentAccount, useSuiClientQuery } from '@mysten/dapp-kit'
 import { useEffect } from 'react'
-import { formatAmount } from "~~/helpers/format";
+import { formatAmount } from '~~/helpers/formatAmount'
 
 const DEFAULT_REFETCH_INTERVAL = 3000
 
@@ -28,14 +28,14 @@ export interface IUseBalanceResponse {
 
 /**
  * The `useBalance()` hook lets you request SUI balance for current user address on the currently active network.
- * 
+ *
  * It's possible to request the balance once or on a regular basis.
- * 
+ *
  * Usage:
  * - One-time request
  * ```ts
- * const { balance } = useBalance({ 
- *   autoRefetch: false 
+ * const { balance } = useBalance({
+ *   autoRefetch: false
  * })
  * ```
  * - On demand
@@ -45,14 +45,14 @@ export interface IUseBalanceResponse {
  * ```
  * - Regular update
  * ```ts
- * const { balance } = useBalance({ 
- *   autoRefetch: true, 
+ * const { balance } = useBalance({
+ *   autoRefetch: true,
  *   autoRefetchInterval: 3000
  * })
  * ```
- * 
+ *
  * Where `autoRefetchInterval` is in milliseconds. Default value is 3000 milliseconds (3 seconds).
- * 
+ *
  * @param {IUseBalanceParams} params The parameter object.
  * @returns {IUseBalanceResponse} An object with the balance, error and refetch function.
  */
