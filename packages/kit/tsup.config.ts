@@ -10,6 +10,7 @@ export default defineConfig((options) => ({
     "src/hooks/useNetworkType.tsx",
     "src/providers/SuiProvider.tsx",
     "src/components/AddressInput.tsx",
+    "src/components/AmountInput.tsx",
   ],
   format: ["cjs", "esm"],
   dts: true,

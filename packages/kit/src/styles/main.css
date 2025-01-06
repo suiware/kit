@@ -12,7 +12,7 @@
   .sk-network-badge {
     @apply rounded-lg px-3 py-1.5;
   }
-  .sk-address-input {
+  .sk-address-input, .sk-amount-input {
     @apply flex flex-col gap-1;
     & input {
       @apply w-full rounded-lg border px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500 border-gray-300;

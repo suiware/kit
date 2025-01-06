@@ -1,6 +1,7 @@
 import { getFullnodeUrl, SuiClient } from '@mysten/sui/client';
 import { SuinsClient } from '@mysten/suins';
 import AddressInput from '@suiware/kit/AddressInput';
+import AmountInput from '@suiware/kit/AmountInput';
 import { FC } from 'react';
 import Layout from '~~/components/layout/Layout';
  
@@ -17,8 +18,13 @@ const suinsClient = new SuinsClient({
 const App: FC = () => {
   return (
     <Layout>
-      <h2 className='text-2xl mb-4'>Components:</h2>
+      <h2 className='text-2xl mb-4'>Components</h2>
+
+      <div className='text-md mt-4 mb-1'>AddressInput</div>
       <AddressInput value='0x0' onChange={(value) => console.log(value)} suinsClient={suinsClient}/>
+
+      <div className='text-md mt-4 mb-1'>AmountInput</div>
+      <AmountInput value='' onChange={(value) => console.log(value)}/>
     </Layout>
   )
 }

@@ -86,7 +86,7 @@ const AddressInput: FC<IAddressInput> = ({
   }, [debouncedResolve])
 
   return (
-    <div className="sk-address-input">
+    <div className={`sk-address-input ${className}`}>
       <input
         type="text"
         value={inputValue}
@@ -96,7 +96,7 @@ const AddressInput: FC<IAddressInput> = ({
           'Enter Sui address' + (suinsClient != null ? ' or SuiNS name' : '')
         }
         disabled={disabled}
-        className={`${error ? 'error' : ''} ${className}`}
+        className={error ? 'error' : ''}
       />
       {error && <span>{error}</span>}
     </div>

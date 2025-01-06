@@ -47,6 +47,11 @@
       "types": "./dist/components/AddressInput.d.ts",
       "import": "./dist/components/AddressInput.mjs",
       "require": "./dist/components/AddressInput.js"
+    },
+    "./AmountInput": {
+      "types": "./dist/components/AmountInput.d.ts",
+      "import": "./dist/components/AmountInput.mjs",
+      "require": "./dist/components/AmountInput.js"
     }
   },
   "files": [
