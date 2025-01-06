@@ -8,16 +8,14 @@ import useFaucet from './hooks/useFaucet'
 import useNetworkType from './hooks/useNetworkType'
 import SuiProvider from './providers/SuiProvider'
 
-declare const exports: {
-  AddressInput: typeof AddressInput;
-  AmountInput: typeof AmountInput;
-  Balance: typeof Balance;
-  Faucet: typeof Faucet;
-  NetworkType: typeof NetworkType;
-  useBalance: typeof useBalance;
-  useFaucet: typeof useFaucet;
-  useNetworkType: typeof useNetworkType;
-  SuiProvider: typeof SuiProvider;
+export {
+  AddressInput,
+  AmountInput,
+  Balance,
+  Faucet,
+  NetworkType,
+  useBalance,
+  useFaucet,
+  useNetworkType,
+  SuiProvider,
 };
-
-export default exports;

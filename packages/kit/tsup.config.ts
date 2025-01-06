@@ -2,6 +2,7 @@ import { defineConfig } from "tsup";
 
 export default defineConfig((options) => ({
   entryPoints: [
+    "src/index.tsx",
     "src/components/Faucet.tsx",
     "src/hooks/useFaucet.tsx",
     "src/components/Balance.tsx",

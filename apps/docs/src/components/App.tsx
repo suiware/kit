@@ -1,7 +1,6 @@
 import { getFullnodeUrl, SuiClient } from '@mysten/sui/client';
 import { SuinsClient } from '@mysten/suins';
-import AddressInput from '@suiware/kit/AddressInput';
-import AmountInput from '@suiware/kit/AmountInput';
+import { AddressInput, AmountInput } from '@suiware/kit';
 import { FC } from 'react';
 import Layout from '~~/components/layout/Layout';
  

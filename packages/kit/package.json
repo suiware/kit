@@ -1,11 +1,13 @@
 {
   "name": "@suiware/kit",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "sideEffects": false,
   "license": "MIT",
   "exports": {
-    "./index.d.ts": {
-      "types": "./dist/index.d.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     },
     "./main.css": {
       "import": "./dist/main.css",
@@ -61,13 +63,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup && npm run styles && npm run types",
+    "build": "tsup && npm run styles",
     "dev": "tsup --watch",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "format": "prettier --write './src/**/*.{js,jsx,ts,tsx}'",
-    "styles": "tailwindcss -c ./tailwind.config.mjs -i ./src/styles/main.css -o ./dist/main.css --minify",
-    "types": "cp ./src/index.d.ts ./dist/index.d.ts && cp ./src/index.d.ts ./dist/index.d.mts"
+    "styles": "tailwindcss -c ./tailwind.config.mjs -i ./src/styles/main.css -o ./dist/main.css --minify"
   },
   "devDependencies": {
     "@mysten/dapp-kit": "^0.14.44",
