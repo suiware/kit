@@ -107,5 +107,14 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "keywords": [
+    "sui",
+    "suiware",
+    "suiware-kit",
+    "dapp-kit",
+    "sui-dapp-kit",
+    "component-library",
+    "react"
+  ]
 }

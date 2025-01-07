@@ -10,9 +10,7 @@ pnpm add @suiware/kit @mysten/dapp-kit @mysten/sui @mysten/suins @mysten/wallet-
 
 ## Usage
 
-### Import styles
-
-In your main component, import the styles:
+### 1. Import styles once in a higher order component
 
 ```tsx
 import '@mysten/dapp-kit/dist/index.css';
@@ -27,7 +25,25 @@ function App() {
 }
 ```
 
-### Wrap your app components into `SuiProvider`
+### 2. Wrap your main component into `SuiProvider`
+
+```tsx
+import '@mysten/dapp-kit/dist/index.css';
+import '@suiware/kit/main.css';
+import { SuiProvider, Balance } from '@suiware/kit'
+
+function App() {
+  return (
+    <SuiProvider>
+      <div className="main">
+        Hey there!
+      </div>
+    </SuiProvider>
+  )
+}
+```
+
+### 3. Use @suiware/kit components and hooks
 
 ```tsx
 import '@mysten/dapp-kit/dist/index.css';
@@ -45,22 +61,22 @@ function App() {
 }
 ```
 
-## API
+## API reference
 
 ## Providers
 
-- [SuiProvider](./docs/SuiProvider.md)
+- [SuiProvider](https://github.com/suiware/kit/blob/main/packages/kit/docs/SuiProvider.md)
 
 ## Components
 
-- [AddressInput](./docs/AddressInput.md)
-- [AmountInput](./docs/AmountInput.md)
-- [Balance](./docs/Balance.md)
-- [Faucet](./docs/Faucet.md)
-- [NetworkType](./docs/NetworkType.md)
+- [AddressInput](https://github.com/suiware/kit/blob/main/packages/kit/docs/AddressInput.md)
+- [AmountInput](https://github.com/suiware/kit/blob/main/packages/kit/docs/AmountInput.md)
+- [Balance](https://github.com/suiware/kit/blob/main/packages/kit/docs/Balance.md)
+- [Faucet](https://github.com/suiware/kit/blob/main/packages/kit/docs/Faucet.md)
+- [NetworkType](https://github.com/suiware/kit/blob/main/packages/kit/docs/NetworkType.md)
 
 ## Hooks
 
-- [useBalance](./docs/useBalance.md)
-- [useFaucet](./docs/useFaucet.md)
-- [useNetworkType](./docs/useNetworkType.md)
+- [useBalance](https://github.com/suiware/kit/blob/main/packages/kit/docs/useBalance.md)
+- [useFaucet](https://github.com/suiware/kit/blob/main/packages/kit/docs/useFaucet.md)
+- [useNetworkType](https://github.com/suiware/kit/blob/main/packages/kit/docs/useNetworkType.md)
