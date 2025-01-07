@@ -1,6 +1,6 @@
 {
   "name": "@suiware/kit",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "sideEffects": false,
   "license": "MIT",
   "main": "./dist/index.js",
@@ -116,5 +116,12 @@
     "sui-dapp-kit",
     "component-library",
     "react"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suiware/kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/suiware/kit/issues"
+  } 
 }
