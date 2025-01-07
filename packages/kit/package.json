@@ -1,6 +1,6 @@
 {
   "name": "@suiware/kit",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "sideEffects": false,
   "type": "module",
   "license": "MIT",
@@ -14,8 +14,8 @@
         "default": "./dist/index.mjs"
       },
       "require": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
       }
     },
     "./SuiProvider": {
@@ -24,8 +24,8 @@
         "default": "./dist/providers/SuiProvider.mjs"
       },
       "require": {
-        "types": "./dist/providers/SuiProvider.d.ts",
-        "default": "./dist/providers/SuiProvider.js"
+        "types": "./dist/providers/SuiProvider.d.cts",
+        "default": "./dist/providers/SuiProvider.cjs"
       }
     },
     "./Faucet": {
@@ -34,8 +34,8 @@
         "default": "./dist/components/Faucet.mjs"
       },
       "require": {
-        "types": "./dist/components/Faucet.d.ts",
-        "default": "./dist/components/Faucet.js"
+        "types": "./dist/components/Faucet.d.cts",
+        "default": "./dist/components/Faucet.cjs"
       }
     },
     "./useFaucet": {
@@ -44,8 +44,8 @@
         "default": "./dist/hooks/useFaucet.mjs"
       },
       "require": {
-        "types": "./dist/hooks/useFaucet.d.ts",
-        "default": "./dist/hooks/useFaucet.js"
+        "types": "./dist/hooks/useFaucet.d.cts",
+        "default": "./dist/hooks/useFaucet.cjs"
       }
     },
     "./Balance": {
@@ -54,8 +54,8 @@
         "default": "./dist/components/Balance.mjs"
       },
       "require": {
-        "types": "./dist/components/Balance.d.ts",
-        "default": "./dist/components/Balance.js"
+        "types": "./dist/components/Balance.d.cts",
+        "default": "./dist/components/Balance.cjs"
       }
     },
     "./useBalance": {
@@ -64,8 +64,8 @@
         "default": "./dist/hooks/useBalance.mjs"
       },
       "require": {
-        "types": "./dist/hooks/useBalance.d.ts",
-        "default": "./dist/hooks/useBalance.js"
+        "types": "./dist/hooks/useBalance.d.cts",
+        "default": "./dist/hooks/useBalance.cjs"
       }
     },
     "./NetworkType": {
@@ -74,8 +74,8 @@
         "default": "./dist/components/NetworkType.mjs"
       },
       "require": {
-        "types": "./dist/components/NetworkType.d.ts",
-        "default": "./dist/components/NetworkType.js"
+        "types": "./dist/components/NetworkType.d.cts",
+        "default": "./dist/components/NetworkType.cjs"
       }
     },
     "./useNetworkType": {
@@ -84,8 +84,8 @@
         "default": "./dist/hooks/useNetworkType.mjs"
       },
       "require": {
-        "types": "./dist/hooks/useNetworkType.d.ts",
-        "default": "./dist/hooks/useNetworkType.js"
+        "types": "./dist/hooks/useNetworkType.d.cts",
+        "default": "./dist/hooks/useNetworkType.cjs"
       }
     },
     "./AddressInput": {
@@ -94,8 +94,8 @@
         "default": "./dist/components/AddressInput.mjs"
       },
       "require": {
-        "types": "./dist/components/AddressInput.d.ts",
-        "default": "./dist/components/AddressInput.js"
+        "types": "./dist/components/AddressInput.d.cts",
+        "default": "./dist/components/AddressInput.cjs"
       }
     },
     "./AmountInput": {
@@ -104,8 +104,8 @@
         "default": "./dist/components/AmountInput.mjs"
       },
       "require": {
-        "types": "./dist/components/AmountInput.d.ts",
-        "default": "./dist/components/AmountInput.js"
+        "types": "./dist/components/AmountInput.d.cts",
+        "default": "./dist/components/AmountInput.cjs"
       }
     }
   },
