@@ -4,7 +4,7 @@ This monorepo includes `@suiware/kit` and a Docs site to demonstrate the kit's c
 
 `@suiware/kit` is an opinionated React library that provides a set of React hooks and components to build Sui applications.
 
-See [@suiware/kit API reference](https://github.com/suiware/kit/blob/main/packages/kit/docs).
+See [@suiware/kit documentation](https://github.com/suiware/kit/tree/main/packages/kit#readme).
 
 ### Useful Commands
 
@@ -34,7 +34,7 @@ Running `pnpm build` from the root of the Turborepo will run the `build` command
 
 ### API reference
 
-[Docs](https://github.com/suiware/kit/blob/main/packages/kit/docs)
+[Docs](https://github.com/suiware/kit/tree/main/packages/kit#readme)
 
 ### Docs app (in progress)
 
