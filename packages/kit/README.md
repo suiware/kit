@@ -30,7 +30,7 @@ function App() {
 ```tsx
 import '@mysten/dapp-kit/dist/index.css';
 import '@suiware/kit/main.css';
-import { SuiProvider, Balance } from '@suiware/kit'
+import { SuiProvider } from '@suiware/kit'
 
 function App() {
   return (
