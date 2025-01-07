@@ -13,8 +13,15 @@ pnpm add @suiware/kit @mysten/dapp-kit @mysten/sui @mysten/suins @mysten/wallet-
 ### 1. Import styles once in a higher order component
 
 ```tsx
-import '@mysten/dapp-kit/dist/index.css';
-import '@suiware/kit/main.css';
+import '@mysten/dapp-kit/dist/index.css'
+import '@suiware/kit/main.css'
+```
+
+Like so:
+
+```tsx
+import '@mysten/dapp-kit/dist/index.css'
+import '@suiware/kit/main.css'
 
 function App() {
   return (
@@ -28,8 +35,8 @@ function App() {
 ### 2. Wrap your main component into `SuiProvider`
 
 ```tsx
-import '@mysten/dapp-kit/dist/index.css';
-import '@suiware/kit/main.css';
+import '@mysten/dapp-kit/dist/index.css'
+import '@suiware/kit/main.css'
 import { SuiProvider } from '@suiware/kit'
 
 function App() {
@@ -46,8 +53,8 @@ function App() {
 ### 3. Use @suiware/kit components and hooks
 
 ```tsx
-import '@mysten/dapp-kit/dist/index.css';
-import '@suiware/kit/main.css';
+import '@mysten/dapp-kit/dist/index.css'
+import '@suiware/kit/main.css'
 import { SuiProvider, Balance } from '@suiware/kit'
 
 function App() {
