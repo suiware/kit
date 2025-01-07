@@ -1,61 +1,112 @@
 {
   "name": "@suiware/kit",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "sideEffects": false,
+  "type": "module",
   "license": "MIT",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    },
     "./main.css": "./dist/main.css",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
     "./SuiProvider": {
-      "types": "./dist/providers/SuiProvider.d.ts",
-      "import": "./dist/providers/SuiProvider.mjs",
-      "require": "./dist/providers/SuiProvider.js"
+      "import": {
+        "types": "./dist/providers/SuiProvider.d.mts",
+        "default": "./dist/providers/SuiProvider.mjs"
+      },
+      "require": {
+        "types": "./dist/providers/SuiProvider.d.ts",
+        "default": "./dist/providers/SuiProvider.js"
+      }
     },
     "./Faucet": {
-      "types": "./dist/components/Faucet.d.ts",
-      "import": "./dist/components/Faucet.mjs",
-      "require": "./dist/components/Faucet.js"
+      "import": {
+        "types": "./dist/components/Faucet.d.mts",
+        "default": "./dist/components/Faucet.mjs"
+      },
+      "require": {
+        "types": "./dist/components/Faucet.d.ts",
+        "default": "./dist/components/Faucet.js"
+      }
     },
     "./useFaucet": {
-      "types": "./dist/hooks/useFaucet.d.ts",
-      "import": "./dist/hooks/useFaucet.mjs",
-      "require": "./dist/hooks/useFaucet.js"
+      "import": {
+        "types": "./dist/hooks/useFaucet.d.mts",
+        "default": "./dist/hooks/useFaucet.mjs"
+      },
+      "require": {
+        "types": "./dist/hooks/useFaucet.d.ts",
+        "default": "./dist/hooks/useFaucet.js"
+      }
     },
     "./Balance": {
-      "types": "./dist/components/Balance.d.ts",
-      "import": "./dist/components/Balance.mjs",
-      "require": "./dist/components/Balance.js"
+      "import": {
+        "types": "./dist/components/Balance.d.mts",
+        "default": "./dist/components/Balance.mjs"
+      },
+      "require": {
+        "types": "./dist/components/Balance.d.ts",
+        "default": "./dist/components/Balance.js"
+      }
     },
     "./useBalance": {
-      "types": "./dist/hooks/useBalance.d.ts",
-      "import": "./dist/hooks/useBalance.mjs",
-      "require": "./dist/hooks/useBalance.js"
+      "import": {
+        "types": "./dist/hooks/useBalance.d.mts",
+        "default": "./dist/hooks/useBalance.mjs"
+      },
+      "require": {
+        "types": "./dist/hooks/useBalance.d.ts",
+        "default": "./dist/hooks/useBalance.js"
+      }
     },
     "./NetworkType": {
-      "types": "./dist/components/NetworkType.d.ts",
-      "import": "./dist/components/NetworkType.mjs",
-      "require": "./dist/components/NetworkType.js"
+      "import": {
+        "types": "./dist/components/NetworkType.d.mts",
+        "default": "./dist/components/NetworkType.mjs"
+      },
+      "require": {
+        "types": "./dist/components/NetworkType.d.ts",
+        "default": "./dist/components/NetworkType.js"
+      }
     },
     "./useNetworkType": {
-      "types": "./dist/hooks/useNetworkType.d.ts",
-      "import": "./dist/hooks/useNetworkType.mjs",
-      "require": "./dist/hooks/useNetworkType.js"
+      "import": {
+        "types": "./dist/hooks/useNetworkType.d.mts",
+        "default": "./dist/hooks/useNetworkType.mjs"
+      },
+      "require": {
+        "types": "./dist/hooks/useNetworkType.d.ts",
+        "default": "./dist/hooks/useNetworkType.js"
+      }
     },
     "./AddressInput": {
-      "types": "./dist/components/AddressInput.d.ts",
-      "import": "./dist/components/AddressInput.mjs",
-      "require": "./dist/components/AddressInput.js"
+      "import": {
+        "types": "./dist/components/AddressInput.d.mts",
+        "default": "./dist/components/AddressInput.mjs"
+      },
+      "require": {
+        "types": "./dist/components/AddressInput.d.ts",
+        "default": "./dist/components/AddressInput.js"
+      }
     },
     "./AmountInput": {
-      "types": "./dist/components/AmountInput.d.ts",
-      "import": "./dist/components/AmountInput.mjs",
-      "require": "./dist/components/AmountInput.js"
+      "import": {
+        "types": "./dist/components/AmountInput.d.mts",
+        "default": "./dist/components/AmountInput.mjs"
+      },
+      "require": {
+        "types": "./dist/components/AmountInput.d.ts",
+        "default": "./dist/components/AmountInput.js"
+      }
     }
   },
   "files": [
@@ -119,7 +170,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/suiware/kit.git"
+    "url": "git+https://github.com/suiware/kit.git"
   },
   "bugs": {
     "url": "https://github.com/suiware/kit/issues"
