@@ -32,11 +32,12 @@ function App() {
 ```tsx
 import { SuiProvider } from '@suiware/kit';
 import { QueryClient } from '@tanstack/react-query';
+import { getFullnodeUrl } from '@mysten/sui/client';
 
 const queryClient = new QueryClient();
 const networkConfig = {
-  devnet: { url: 'https://fullnode.devnet.sui.io' },
-  testnet: { url: 'https://fullnode.testnet.sui.io' },
+  devnet: { url: getFullnodeUrl('devnet')  },
+  testnet: { url: getFullnodeUrl('testnet')  },
 };
 
 function App() {
@@ -53,9 +54,3 @@ function App() {
   );
 }
 ```
-
-## Dependencies
-
-- @mysten/dapp-kit
-- @mysten/sui
-- @tanstack/react-query

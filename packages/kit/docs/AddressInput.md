@@ -43,6 +43,7 @@ function MyComponent() {
 ```tsx
 import { AddressInput } from '@suiware/kit';
 import { SuinsClient } from '@mysten/suins';
+import { getFullnodeUrl, SuiClient } from '@mysten/sui/client';
 
 const client = new SuiClient({ url: getFullnodeUrl('mainnet') });
 const suinsClient = new SuinsClient({
@@ -63,9 +64,3 @@ function MyComponent() {
   );
 }
 ```
-
-## Dependencies
-
-- @mysten/sui
-- @mysten/suins
-- lodash.debounce
