@@ -172,6 +172,9 @@ importers:
       '@mysten/wallet-standard':
         specifier: ^0.13.20
         version: 0.13.20(typescript@5.7.2)
+      '@radix-ui/colors':
+        specifier: ^3.0.0
+        version: 3.0.0
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config

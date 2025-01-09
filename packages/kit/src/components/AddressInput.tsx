@@ -4,6 +4,7 @@ import debounce from 'lodash.debounce'
 import { ChangeEvent, FC, useCallback, useEffect, useState } from 'react'
 import { resolveSuinsName } from '~~/helpers/suins'
 
+
 const DEBOUNCE_DELAY = 500
 
 export interface IAddressInput {
