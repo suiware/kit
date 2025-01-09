@@ -15,7 +15,6 @@
   .sk-address-input, .sk-amount-input {
     @apply flex flex-col gap-1;
     & input {
-     
       @apply w-full rounded-lg border px-3 py-1.5 
              border-slate3 bg-slate1 text-slate12
              focus:outline-none focus:ring-2 focus:ring-blue7
@@ -25,7 +24,8 @@
                dark:border-slateDark7;
       }
       &:focus {
-        @apply border-blue7 dark:border-blueDark7 dark:ring-blueDark7;
+        @apply border-blue7 
+               dark:border-blueDark7 dark:ring-blueDark7;
       }
       &.error {
         @apply border-red7 bg-red3 focus:ring-red7
@@ -33,8 +33,8 @@
       }
     }
     & span {
-      @apply text-sm text-red7
-             dark:text-redDark7;
+      @apply text-sm text-red9 
+             dark:text-redDark8;
     }
   }
 }

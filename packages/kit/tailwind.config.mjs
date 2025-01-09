@@ -16,7 +16,7 @@ import {
  */
 const prefixDarkColors = (obj, colorName) => {
   return Object.entries(obj).reduce((acc, [key, value]) => {
-    // Extract just the number from the key
+    // Extract just the number from the key.
     const numberKey = key.replace(/^[a-zA-Z]+/, '')
     acc[`${colorName}Dark${numberKey}`] = value
     return acc
