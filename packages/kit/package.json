@@ -2,8 +2,8 @@
   "name": "@suiware/kit",
   "version": "0.5.0",
   "sideEffects": false,
-  "type": "module",
   "license": "MIT",
+  "type": "commonjs",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
