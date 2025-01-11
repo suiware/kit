@@ -12,6 +12,7 @@ export default defineConfig((options) => ({
     "src/providers/SuiProvider.tsx",
     "src/components/AddressInput.tsx",
     "src/components/AmountInput.tsx",
+    "src/hooks/useTransact.tsx",
   ],
   format: ["cjs", "esm"],
   dts: true,

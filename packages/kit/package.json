@@ -1,6 +1,6 @@
 {
   "name": "@suiware/kit",
-  "version": "0.4.5",
+  "version": "0.5.0",
   "sideEffects": false,
   "type": "module",
   "license": "MIT",
@@ -106,6 +106,16 @@
       "require": {
         "types": "./dist/components/AmountInput.d.cts",
         "default": "./dist/components/AmountInput.cjs"
+      }
+    },
+    "./useTransact": {
+      "import": {
+        "types": "./dist/hooks/useTransact.d.mts",
+        "default": "./dist/hooks/useTransact.mjs"
+      },
+      "require": {
+        "types": "./dist/hooks/useTransact.d.cts",
+        "default": "./dist/hooks/useTransact.cjs"
       }
     }
   },

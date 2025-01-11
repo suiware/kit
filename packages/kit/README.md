@@ -84,6 +84,7 @@ function App() {
 
 ## Hooks
 
+- [useTransact](https://github.com/suiware/kit/blob/main/packages/kit/docs/useTransact.md)
 - [useBalance](https://github.com/suiware/kit/blob/main/packages/kit/docs/useBalance.md)
 - [useFaucet](https://github.com/suiware/kit/blob/main/packages/kit/docs/useFaucet.md)
 - [useNetworkType](https://github.com/suiware/kit/blob/main/packages/kit/docs/useNetworkType.md)
