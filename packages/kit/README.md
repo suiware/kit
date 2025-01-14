@@ -1,6 +1,6 @@
 # @suiware/kit
 
-Opinionated React components and hooks for Sui dApps.
+Opinionated React components and hooks for building Sui dApps.
 
 ## Installation
 
