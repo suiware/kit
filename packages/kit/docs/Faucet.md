@@ -1,3 +1,8 @@
+---
+redirect_from:
+  - /docs/frontend/components/Faucet
+---
+
 # Faucet
 
 `Faucet` is a React component that provides a button to fund the user's current address with test SUI tokens on supported test networks.

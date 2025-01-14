@@ -1,3 +1,8 @@
+---
+redirect_from:
+  - /docs/frontend/hooks/useTransact
+---
+
 # useTransact
 
 `useTransact` is a React hook that facilitates performing transactions on the Sui network, handling wallet interactions and transaction lifecycle events.

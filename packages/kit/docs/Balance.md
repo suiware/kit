@@ -1,3 +1,8 @@
+---
+redirect_from:
+  - /docs/frontend/components/Balance
+---
+
 # Balance
 
 `Balance` is a React component that displays the current user's SUI token balance on the active network.

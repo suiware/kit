@@ -1,3 +1,8 @@
+---
+redirect_from:
+  - /docs/frontend/hooks/useBalance
+---
+
 # useBalance
 
 `useBalance` is a React hook that provides functionality to fetch and monitor SUI token balances for the currently connected wallet address.

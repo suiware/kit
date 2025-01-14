@@ -1,3 +1,8 @@
+---
+redirect_from:
+  - /docs/frontend/components/NetworkType
+---
+
 # NetworkType
 
 `NetworkType` is a React component that displays the current network type with color-coded badges. It automatically syncs with the connected wallet's network status.

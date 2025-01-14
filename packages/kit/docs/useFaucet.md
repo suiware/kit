@@ -1,3 +1,8 @@
+---
+redirect_from:
+  - /docs/frontend/hooks/useFaucet
+---
+
 # useFaucet
 
 `useFaucet` is a React hook that allows you to fund addresses with SUI tokens on test networks (localnet, devnet, and testnet).

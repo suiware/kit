@@ -1,3 +1,8 @@
+---
+redirect_from:
+  - /docs/frontend/hooks/useSynchronizedNetworkType
+---
+
 # useNetworkType
 
 `useNetworkType` is a React hook that helps you determine and synchronize with the network type (mainnet, testnet, devnet, or localnet) currently active in the user's wallet.
