@@ -1,5 +1,7 @@
 {
   "projects": {
     "default": "suiware-react-kit"
-  }
+  },
+  "targets": {},
+  "etags": {}
 }

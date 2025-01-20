@@ -9,7 +9,8 @@
     "version-packages": "changeset version",
     "release": "turbo run build --filter=docs^... && changeset publish",
     "prepublishOnly": "turbo run build --filter=docs^...",
-    "kit:publish": "turbo run build --filter=docs^... && pnpm --filter=@suiware/kit publish"
+    "kit:publish": "turbo run build --filter=docs^... && pnpm --filter=@suiware/kit publish",
+    "docs:deploy": "pnpm  --filter=docs deploy:firebase"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.11",
@@ -17,5 +18,5 @@
     "turbo": "^2.3.3"
   },
   "packageManager": "pnpm@9.15.0",
-  "name": "design-system"
+  "name": "suiware-kit-monorepo"
 }

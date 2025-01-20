@@ -2,6 +2,8 @@
 
 Opinionated React components and hooks for building Sui dApps.
 
+[Demo](https://kit.suiware.io)
+
 ## Installation
 
 ```bash
