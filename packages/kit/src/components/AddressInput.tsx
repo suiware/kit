@@ -36,7 +36,6 @@ const AddressInput: FC<IAddressInput> = ({
         return
       }
 
-      console.debug('debug: SuiNS name resolving started')
       try {
         const resolvedAddress = await resolveSuinsName(suinsClient, name)
         if (resolvedAddress) {
@@ -58,7 +57,6 @@ const AddressInput: FC<IAddressInput> = ({
 
     // Handle SuiNS names.
     if (newValue.endsWith('.sui') || newValue.startsWith('@')) {
-      console.debug('debug: SuiNS name detected')
       debouncedResolve(newValue)
       return
     }

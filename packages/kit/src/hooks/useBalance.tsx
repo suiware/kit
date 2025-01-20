@@ -73,13 +73,11 @@ const useBalance = ({
     const interval = setInterval(
       () => {
         if (currentAccount == null || !autoRefetch) {
-          console.debug('debug: Balance refetching stopped')
           clearInterval(interval)
           return
         }
 
         refetch()
-        console.debug('debug: Balance refetched')
       },
       autoRefetch && autoRefetchInterval != null
         ? autoRefetchInterval
@@ -96,7 +94,6 @@ const useBalance = ({
     error,
     refetch: async () => {
       refetch()
-      console.debug('debug: Balance refetched')
     },
   }
 }

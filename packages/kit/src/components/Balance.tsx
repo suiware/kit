@@ -13,7 +13,6 @@ const Balance = () => {
   const { balance } = useBalance({ autoRefetch: true });
 
   if (balance == null) {
-    console.debug("debug: Balance is null");
     return <></>;
   }
 

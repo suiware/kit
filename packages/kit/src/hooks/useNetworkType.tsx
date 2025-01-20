@@ -91,8 +91,6 @@ const useNetworkType = ({
     if (newNetwork != null) {
       ctx.selectNetwork(newNetwork);
     }
-
-    console.debug("debug: Network type synchronized");
   };
 
   useEffect(() => {
@@ -105,7 +103,6 @@ const useNetworkType = ({
     const interval = setInterval(
       () => {
         if (!wallet.isConnected || !autoSync) {
-          console.debug("debug: Network type synchronizing stopped");
           setNetworkType(undefined);
           clearInterval(interval);
           return;
