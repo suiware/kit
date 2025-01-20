@@ -20,37 +20,68 @@ const suinsClient = new SuinsClient({
   network: 'mainnet',
 })
 
+const DOCS_URL = 'https://github.com/suiware/kit/tree/main/packages/kit#readme'
+
 const IndexPage: FC = () => {
   return (
     <Layout>
-      <h2 className="mb-4 text-2xl">Components</h2>
+      <div className="flex flex-col items-start justify-start gap-6 p-8">
+        <section>
+          <h2 className="my-2 text-2xl text-gray-700">Components</h2>
 
-      <ComponentView label="AddressInput">
-        <AddressInput
-          value="0x0"
-          onChange={(value) => console.log(value)}
-          suinsClient={suinsClient}
-        />
-      </ComponentView>
+          <ComponentView label="AddressInput">
+            <AddressInput
+              value="0x0"
+              onChange={(value) => console.log(value)}
+              suinsClient={suinsClient}
+            />
+          </ComponentView>
 
-      <ComponentView label="AmountInput">
-        <AmountInput value="" onChange={(value) => console.log(value)} />
-      </ComponentView>
+          <ComponentView label="AmountInput">
+            <AmountInput value="" onChange={(value) => console.log(value)} />
+          </ComponentView>
 
-      <ComponentView label="NetworkType">
-        <NetworkType />
-      </ComponentView>
+          <ComponentView label="NetworkType">
+            <NetworkType />
+          </ComponentView>
 
-      <ComponentView label="Balance">
-        <Balance />
-      </ComponentView>
+          <ComponentView label="Balance">
+            <Balance />
+          </ComponentView>
 
-      <ComponentView label="Faucet">
-        <Faucet
-          onSuccess={(message) => alert(message)}
-          onError={(error) => alert(error)}
-        />
-      </ComponentView>
+          <ComponentView label="Faucet">
+            <Faucet
+              onSuccess={(message) => alert(message)}
+              onError={(error) => alert(error)}
+            />
+          </ComponentView>
+        </section>
+
+        <section>
+          <h2 className="my-2 text-2xl text-gray-700">Hooks</h2>
+
+          <div className="my-2">
+            Read in the{' '}
+            <a
+              href={DOCS_URL}
+              className="text-md text-sds-blue"
+              target="_blank"
+            >
+              docs
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div className="mx-auto p-6">
+        <a
+          href={DOCS_URL}
+          className="text-md border border-sds-blue p-2 font-bold text-sds-blue"
+          target="_blank"
+        >
+          GITHUB DOCS
+        </a>
+      </div>
     </Layout>
   )
 }
@@ -66,8 +97,8 @@ const ComponentView: FC<PropsWithChildren<IComponentViewProps>> = ({
 }) => {
   return (
     <div className="my-2">
-      <div className="text-md mb-1 mt-4 font-bold">{label}</div>
-      <div className="flex flex-col justify-center border border-dashed border-gray-200 p-3">
+      <div className="text-md mb-1 mt-4 text-gray-700 font-bold">{label}</div>
+      <div className="flex flex-col justify-center border border-dashed border-gray-200 p-4">
         {children}
       </div>
     </div>
