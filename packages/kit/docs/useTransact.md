@@ -16,7 +16,7 @@ import { Transaction } from '@mysten/sui/transactions'
 function MyComponent() {
   const { transact } = useTransact({
     onBeforeStart: () => console.log('Transaction starting...'),
-    onSuccess: (data) => console.log('Transaction succeeded:', data),
+    onSuccess: (data, response) => console.log('Transaction succeeded:', data, response),
     onError: (e) => console.error('Transaction failed:', e),
     waitForTransactionOptions: {
       showEffects: true,
