@@ -17,7 +17,10 @@ function MyComponent() {
   const { transact } = useTransact({
     onBeforeStart: () => console.log('Transaction starting...'),
     onSuccess: (data) => console.log('Transaction succeeded:', data),
-    onError: (e) => console.error('Transaction failed:', e)
+    onError: (e) => console.error('Transaction failed:', e),
+    waitForTransactionOptions: {
+      showEffects: true,
+    },
   })
 
   const handleTransaction = () => {
@@ -41,8 +44,9 @@ The hook accepts an options object with the following properties:
 | Parameter | Type | Description |
 | --- | --- | --- |
 | onBeforeStart | () => void | (Optional) Callback executed when user triggers a transaction |
-| onSuccess | (data: SuiSignAndExecuteTransactionOutput) => void | (Optional) Callback executed after successful transaction completion |
+| onSuccess | (data: SuiSignAndExecuteTransactionOutput, waitForTransactionResponse: SuiTransactionBlockResponse) => void | (Optional) Callback executed when transaction succeeds |
 | onError | (e: Error) => void | (Optional) Callback executed if transaction fails |
+| waitForTransactionOptions | SuiTransactionBlockResponseOptions | (Optional) Options for waitForTransaction call |
 
 ## Return Value
 
