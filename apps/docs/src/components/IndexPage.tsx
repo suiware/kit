@@ -10,22 +10,29 @@ import {
 import { FC, PropsWithChildren } from 'react'
 import Layout from '~~/components/layout/Layout'
 
-// You need a Sui client. You can re-use the Sui client of your project
-// (it's not recommended to create a new one).
 const client = new SuiClient({ url: getFullnodeUrl('mainnet') })
-
-// Now you can use it to create a SuiNS client.
 const suinsClient = new SuinsClient({
   client,
   network: 'mainnet',
 })
 
 const DOCS_URL = 'https://github.com/suiware/kit/tree/main/packages/kit#readme'
+const SUI_DAPP_STARTER_URL = 'https://sui-dapp-starter.dev'
 
 const IndexPage: FC = () => {
   return (
     <Layout>
-      <div className="flex flex-col items-start justify-start gap-6 p-8">
+      <div className="flex flex-col items-start justify-start gap-6 px-8">
+        <div className="mx-auto mb-6">
+          <a
+            href={DOCS_URL}
+            className="text-md border border-sds-blue p-2 font-bold text-sds-blue rounded"
+            target="_blank"
+          >
+            GITHUB DOCS
+          </a>
+        </div>
+
         <section>
           <h2 className="my-2 text-2xl text-gray-700">Components</h2>
 
@@ -71,16 +78,24 @@ const IndexPage: FC = () => {
             </a>
           </div>
         </section>
-      </div>
 
-      <div className="mx-auto p-6">
-        <a
-          href={DOCS_URL}
-          className="text-md border border-sds-blue p-2 font-bold text-sds-blue"
-          target="_blank"
-        >
-          GITHUB DOCS
-        </a>
+        <section>
+          <h2 className="my-2 text-2xl text-gray-700">Usage examples</h2>
+
+          <div className="my-2">
+            <ul className="list-disc pl-4">
+              <li>
+                <a
+                  href={SUI_DAPP_STARTER_URL}
+                  className="text-sds-blue"
+                  target="_blank"
+                >
+                  Sui dApp Starter
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
     </Layout>
   )
