@@ -1,40 +1,65 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer components {
-  .sk-balance-badge {
-    @apply rounded-lg px-3 py-1.5;
-  }
-  .sk-faucet-button {
-    @apply cursor-pointer rounded-lg px-3 py-1.5;
-  }
-  .sk-network-badge {
-    @apply rounded-lg px-3 py-1.5;
-  }
-  .sk-address-input, .sk-amount-input {
-    @apply flex flex-col gap-1;
-    & input {
-      @apply w-full rounded-lg border px-3 py-1.5 
+@utility sk-balance-badge {
+  @apply rounded-lg px-3 py-1.5;
+}
+
+@utility sk-faucet-button {
+  @apply cursor-pointer rounded-lg px-3 py-1.5;
+}
+
+@utility sk-network-badge {
+  @apply rounded-lg px-3 py-1.5;
+}
+
+@utility sk-address-input {
+  @apply flex flex-col gap-1;
+  & input {
+    @apply w-full rounded-lg border px-3 py-1.5 
              border-slate3 bg-slate1 text-slate12
              focus:outline-none focus:ring-2 focus:ring-blue7
              dark:border-slateDark3 dark:bg-slateDark1 dark:text-slateDark12;
-      &:hover {
-        @apply border-slate7
+    &:hover {
+      @apply border-slate7
                dark:border-slateDark7;
-      }
-      &:focus {
-        @apply border-blue7 
+    }
+    &:focus {
+      @apply border-blue7 
                dark:border-blueDark7 dark:ring-blueDark7;
-      }
-      &.error {
-        @apply border-red7 bg-red3 focus:ring-red7
+    }
+    &.error {
+      @apply border-red7 bg-red3 focus:ring-red7
                dark:border-redDark7 dark:bg-redDark3 dark:ring-redDark7;
-      }
     }
-    & span {
-      @apply text-sm text-red9 
+  }
+  & span {
+    @apply text-sm text-red9 
              dark:text-redDark8;
+  }
+}
+
+@utility sk-amount-input {
+  @apply flex flex-col gap-1;
+  & input {
+    @apply w-full rounded-lg border px-3 py-1.5 
+             border-slate3 bg-slate1 text-slate12
+             focus:outline-none focus:ring-2 focus:ring-blue7
+             dark:border-slateDark3 dark:bg-slateDark1 dark:text-slateDark12;
+    &:hover {
+      @apply border-slate7
+               dark:border-slateDark7;
     }
+    &:focus {
+      @apply border-blue7 
+               dark:border-blueDark7 dark:ring-blueDark7;
+    }
+    &.error {
+      @apply border-red7 bg-red3 focus:ring-red7
+               dark:border-redDark7 dark:bg-redDark3 dark:ring-redDark7;
+    }
+  }
+  & span {
+    @apply text-sm text-red9 
+             dark:text-redDark8;
   }
 }
