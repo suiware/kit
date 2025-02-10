@@ -16,6 +16,7 @@ export default defineConfig((options) => ({
   ],
   format: ["cjs", "esm"],
   dts: true,
+  clean: true,
   sourcemap: true,
   treeshake: true,
   external: ["react"],
