@@ -16,7 +16,7 @@ export default defineConfig((options) => ({
   ],
   format: ['cjs', 'esm'],
   dts: true,
-  clean: options.env?.NODE_ENV === 'prod',
+  clean: !options.watch,
   sourcemap: true,
   treeshake: true,
   external: ['react'],
