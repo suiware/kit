@@ -14,7 +14,7 @@ import { useFaucet } from '@suiware/kit';
 function MyComponent() {
   const { fund } = useFaucet({
     onSuccess: (message) => console.log(message),
-    onError: (error, message) => console.error(message)
+    onError: (error, userFriendlyMessage) => console.error(error, userFriendlyMessage)
   });
 
   return (
@@ -64,6 +64,8 @@ The component supports the following test networks with different token amounts:
 | devnet | 10 SUI |
 | testnet | 1 SUI |
 
+Please note, for the **testnet**, the faucet link is opened in a new tab.
+
 ## Example with Error Handling
 
 ```tsx
@@ -74,8 +76,8 @@ function MyComponent() {
     onSuccess: (message) => {
       alert(message);
     },
-    onError: (_, errorMessage) => {
-      alert(errorMessage);
+    onError: (_, userFriendlyMessage) => {
+      alert(userFriendlyMessage);
     }
   });
 

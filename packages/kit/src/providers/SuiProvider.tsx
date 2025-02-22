@@ -3,15 +3,15 @@ import {
   SuiClientProvider,
   Theme,
   WalletProvider,
-} from "@mysten/dapp-kit";
-import { SuiClient } from "@mysten/sui/client";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { FC, PropsWithChildren } from "react";
+} from '@mysten/dapp-kit'
+import { SuiClient } from '@mysten/sui/client'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { FC, PropsWithChildren } from 'react'
 
 // @todo: Extract to a separate file.
 export type NetworkConfigs<
   T extends NetworkConfig | SuiClient = NetworkConfig | SuiClient,
-> = Record<string, T>;
+> = Record<string, T>
 
 export interface ISuiProviderProps extends PropsWithChildren {
   customQueryClient?: QueryClient
@@ -22,7 +22,7 @@ export interface ISuiProviderProps extends PropsWithChildren {
   themeSettings?: Theme | null
 }
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient()
 
 const SuiProvider: FC<ISuiProviderProps> = ({
   children,
@@ -51,4 +51,4 @@ const SuiProvider: FC<ISuiProviderProps> = ({
   )
 }
 
-export default SuiProvider;
+export default SuiProvider

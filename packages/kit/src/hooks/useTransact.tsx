@@ -1,5 +1,8 @@
 import { useSignAndExecuteTransaction, useSuiClient } from '@mysten/dapp-kit'
-import { SuiTransactionBlockResponse, SuiTransactionBlockResponseOptions } from '@mysten/sui/client'
+import {
+  SuiTransactionBlockResponse,
+  SuiTransactionBlockResponseOptions,
+} from '@mysten/sui/client'
 import { Transaction } from '@mysten/sui/transactions'
 import type { SuiSignAndExecuteTransactionOutput } from '@mysten/wallet-standard'
 
@@ -14,7 +17,10 @@ export interface IUseTransactParams {
    * @param {SuiSignAndExecuteTransactionOutput} data The transaction output.
    * @param {SuiTransactionBlockResponse} waitForTransactionResponse The transaction response.
    */
-  onSuccess?: (data: SuiSignAndExecuteTransactionOutput, waitForTransactionResponse: SuiTransactionBlockResponse) => void
+  onSuccess?: (
+    data: SuiSignAndExecuteTransactionOutput,
+    waitForTransactionResponse: SuiTransactionBlockResponse
+  ) => void
   /**
    * (Optional) React on error.
    *

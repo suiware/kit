@@ -16,7 +16,7 @@ function MyComponent() {
   return (
     <Faucet
       onSuccess={(message) => console.log(message)}
-      onError={(error) => console.error(error)}
+      onError={(error, userFriendlyMessage) => console.error(error, userFriendlyMessage)}
     />
   );
 }
@@ -53,6 +53,8 @@ The component supports the following test networks with different token amounts:
 | devnet | 10 SUI |
 | testnet | 1 SUI |
 
+Please note, for the **testnet**, the faucet link is opened in a new tab.
+
 ## Usage Limits
 
 - Devnet and testnet have daily request quotas
@@ -77,8 +79,8 @@ function MyComponent() {
     console.log('Funding successful:', message);
   };
 
-  const handleError = (error: Error | null, errorMessage?: string) => {
-    console.error('Funding failed:', errorMessage || error?.message);
+  const handleError = (error: Error | null, userFriendlyMessage?: string) => {
+    console.error('Funding failed:', userFriendlyMessage || error?.message);
   };
 
   return (

@@ -18,4 +18,4 @@ export {
   useFaucet,
   useNetworkType,
   SuiProvider,
-};
+}

@@ -26,7 +26,7 @@ const IndexPage: FC = () => {
         <div className="mx-auto mb-6">
           <a
             href={DOCS_URL}
-            className="text-md border border-sds-blue p-2 font-bold text-sds-blue rounded"
+            className="text-md rounded border border-sds-blue p-2 font-bold text-sds-blue"
             target="_blank"
           >
             GITHUB DOCS
@@ -59,7 +59,9 @@ const IndexPage: FC = () => {
           <ComponentView label="Faucet">
             <Faucet
               onSuccess={(message) => alert(message)}
-              onError={(error) => alert(error)}
+              onError={(error, userFriendlyMessage) =>
+                alert(userFriendlyMessage || error?.message)
+              }
             />
           </ComponentView>
         </section>
@@ -112,7 +114,7 @@ const ComponentView: FC<PropsWithChildren<IComponentViewProps>> = ({
 }) => {
   return (
     <div className="my-2">
-      <div className="text-md mb-1 mt-4 text-gray-700 font-bold">{label}</div>
+      <div className="text-md mb-1 mt-4 font-bold text-gray-700">{label}</div>
       <div className="flex flex-col justify-center border border-dashed border-gray-200 p-4">
         {children}
       </div>

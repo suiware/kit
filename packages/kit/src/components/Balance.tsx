@@ -1,5 +1,5 @@
-import { Badge } from "@radix-ui/themes";
-import useBalance from "~~/hooks/useBalance";
+import { Badge } from '@radix-ui/themes'
+import useBalance from '~~/hooks/useBalance'
 
 /**
  * The `Balance` component is used for displaying SUI balance for current user address on the currently active network.
@@ -10,17 +10,17 @@ import useBalance from "~~/hooks/useBalance";
  * The component is using the useBalance hook to fetch the balance.
  */
 const Balance = () => {
-  const { balance } = useBalance({ autoRefetch: true });
+  const { balance } = useBalance({ autoRefetch: true })
 
   if (balance == null) {
-    return <></>;
+    return <></>
   }
 
   return (
     <Badge variant="surface" color="green" className="sk-balance-badge">
       {balance} SUI
     </Badge>
-  );
-};
+  )
+}
 
-export default Balance;
+export default Balance
