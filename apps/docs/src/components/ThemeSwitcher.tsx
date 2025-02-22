@@ -21,7 +21,7 @@ const ThemeSwitcher = () => {
 
   return (
     <Toggle.Root aria-label="Toggle theme" onPressedChange={toggleTheme}>
-      <Badge className="rounded-full p-2 shadow" highContrast={true}>
+      <Badge className="rounded-full p-2 shadow-sm" highContrast={true}>
         {theme === 'dark' ? (
           <SunIcon className="h-5 w-5" />
         ) : (

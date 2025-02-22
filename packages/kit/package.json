@@ -124,11 +124,11 @@
   ],
   "scripts": {
     "build": "tsup && npm run styles",
-    "dev": "tsup --watch",
+    "dev": "npm run styles && tsup --watch",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "format": "prettier --write './src/**/*.{js,jsx,ts,tsx}'",
-    "styles": "pnpx @tailwindcss/cli -c ./tailwind.config.mjs -i ./src/styles/main.css -o ./dist/main.css --minify"
+    "styles": "pnpx @tailwindcss/cli -i ./src/styles/main.css -o ./dist/main.css --minify"
   },
   "devDependencies": {
     "@mysten/dapp-kit": "^0.14.50",

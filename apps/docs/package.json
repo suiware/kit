@@ -31,13 +31,13 @@
     "react-use": "^17.6.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.8",
     "@types/node": "^22.13.5",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@typescript-eslint/eslint-plugin": "^8.24.1",
     "@typescript-eslint/parser": "^8.24.1",
     "@vitejs/plugin-react-swc": "^3.8.0",
-    "autoprefixer": "^10.4.20",
     "env-file-rw": "^1.0.0",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.1",

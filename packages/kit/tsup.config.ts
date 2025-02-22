@@ -16,7 +16,7 @@ export default defineConfig((options) => ({
   ],
   format: ["cjs", "esm"],
   dts: true,
-  clean: true,
+  clean: options.env?.NODE_ENV === "dev",
   // minify: true,
   sourcemap: true,
   treeshake: true,

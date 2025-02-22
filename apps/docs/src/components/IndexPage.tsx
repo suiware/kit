@@ -26,7 +26,7 @@ const IndexPage: FC = () => {
         <div className="mx-auto mb-6">
           <a
             href={DOCS_URL}
-            className="text-md border border-sds-blue p-2 font-bold text-sds-blue rounded"
+            className="text-md border border-sds-blue p-2 font-bold text-sds-blue rounded-sm"
             target="_blank"
           >
             GITHUB DOCS

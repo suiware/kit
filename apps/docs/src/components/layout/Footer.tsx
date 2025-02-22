@@ -9,7 +9,7 @@ const Footer = () => {
         
       </div>
 
-      <div className="flex flex-grow flex-col items-center justify-center gap-1">
+      <div className="flex grow flex-col items-center justify-center gap-1">
         <div className="flex flex-row items-center justify-center gap-1">
           <span>Built with</span>
           <HeartIcon className="h-4 w-4" />
