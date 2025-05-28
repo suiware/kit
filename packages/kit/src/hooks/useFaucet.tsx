@@ -58,14 +58,14 @@ const useFaucet = ({
     }
 
     try {
-      const { error } = await fundAddress(
+      const { status } = await fundAddress(
         fundedAddress,
         ctx.network as 'localnet' | 'devnet'
       )
-      if (error) {
+      if (status !== 'Success') {
         onError != null &&
           onError(
-            new Error(error),
+            new Error(status.Failure.internal),
             'Cannot fund the address on this network at the moment'
           )
       }

@@ -18,7 +18,11 @@ export interface ISuiProviderProps extends PropsWithChildren {
   customNetworkConfig?: NetworkConfigs<NetworkConfig | SuiClient> | undefined
   defaultNetwork?: string
   walletAutoConnect?: boolean
+  /**
+   * @deprecated Use `walletSlushName` instead.
+   */
   walletStashedName?: string
+  walletSlushName?: string
   themeSettings?: Theme | null
 }
 
@@ -31,6 +35,7 @@ const SuiProvider: FC<ISuiProviderProps> = ({
   defaultNetwork,
   walletAutoConnect,
   walletStashedName,
+  walletSlushName,
   themeSettings,
 }) => {
   return (
@@ -42,7 +47,7 @@ const SuiProvider: FC<ISuiProviderProps> = ({
         <WalletProvider
           autoConnect={walletAutoConnect}
           theme={themeSettings}
-          stashedWallet={{ name: walletStashedName || 'Sui Wallet' }}
+          slushWallet={{ name: walletSlushName || walletStashedName || 'Sui Wallet' }}
         >
           {children}
         </WalletProvider>

@@ -22,7 +22,7 @@ const App: FC = () => {
           customNetworkConfig={networkConfig}
           defaultNetwork={'localnet'}
           walletAutoConnect={false}
-          walletStashedName={APP_NAME}
+          walletSlushName={APP_NAME}
           themeSettings={themeSettings}
         >
           <IndexPage />
