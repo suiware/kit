@@ -24,7 +24,7 @@ function App() {
 | `customNetworkConfig` | `Record<string, NetworkConfig \| SuiClient>` | Custom network configurations | `undefined` |
 | `defaultNetwork` | `string` | The default network to connect to | `undefined` |
 | `walletAutoConnect` | `boolean` | Whether to automatically connect to the wallet | `undefined` |
-| `walletStashedName` | `string` | Name of the stashed wallet | `'Sui Wallet'` |
+| `walletSlushName` | `string` | Name of the Slush wallet | `'Sui Wallet'` |
 | `themeSettings` | `Theme \| null` | Custom theme settings for the wallet UI | `undefined` |
 
 ## Example with Custom Configuration
@@ -47,7 +47,7 @@ function App() {
       customNetworkConfig={networkConfig}
       defaultNetwork="devnet"
       walletAutoConnect={true}
-      walletStashedName="My Sui Wallet"
+      walletSlushName="My Sui Wallet"
     >
       {/* Your app components */}
     </SuiProvider>
