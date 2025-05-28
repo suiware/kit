@@ -47,7 +47,9 @@ const SuiProvider: FC<ISuiProviderProps> = ({
         <WalletProvider
           autoConnect={walletAutoConnect}
           theme={themeSettings}
-          slushWallet={{ name: walletSlushName || walletStashedName || 'Sui Wallet' }}
+          slushWallet={{
+            name: walletSlushName || walletStashedName || 'Sui Wallet',
+          }}
         >
           {children}
         </WalletProvider>
