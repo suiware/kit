@@ -14,9 +14,9 @@
     "format": "turbo run format"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.4",
-    "prettier": "^3.5.3",
-    "turbo": "^2.5.3"
+    "@changesets/cli": "^2.29.5",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.5"
   },
   "packageManager": "pnpm@10.4.1",
   "name": "suiware-kit-monorepo",
