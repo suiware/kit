@@ -18,7 +18,7 @@
     "prettier": "^3.7.4",
     "turbo": "^2.6.1"
   },
-  "packageManager": "pnpm@10.4.1",
+  "packageManager": "pnpm@10.24.0",
   "name": "suiware-kit-monorepo",
   "pnpm": {
     "onlyBuiltDependencies": [
